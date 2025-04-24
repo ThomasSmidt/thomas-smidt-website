@@ -1,15 +1,18 @@
 import React from 'react';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import Skills from './components/Skills';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Skills />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/blackjack" element*/}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
