@@ -1,13 +1,13 @@
 import React from 'react';
-import './Navbar.css';
+import './Navbar.scss';
 
 const Navbar = () => {
   return (
     <section id="navbar">
-        <h1 id="nav-logo">Thomas Smidt</h1>
+        <a href="/" id="nav-logo">Thomas Smidt</a>
         <div id="nav-links">
-            <h1>Projects</h1>
-            <h1>Contact me</h1>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact me</a>
         </div>
     </section>
   );

@@ -1,17 +1,22 @@
 import React from 'react';
-import './FloatingLogos.css';
+import './FloatingLogos.scss';
 
-const FloatingLogos = () => {
+const skills = ['.NET', 'Angular', 'React', 'ASP.NET', 'SQL', 'xUnit', 'Moq'];
+
+const FloatingLogos = ({ onSkillClick, selectedSkill }) => {
     return (
-    <div id="dev-logo-container">
-        <h1 class="dev-logo">.NET</h1>
-        <h1 class="dev-logo">React</h1>
-        <h1 class="dev-logo">SQL</h1>
-        <h1 class="dev-logo">xUnit</h1>
-        <h1 class="dev-logo">Moq</h1>
-        <h1 class="dev-logo">Blazor</h1>
-    </div>
+        <div id="skill-item-container">
+            {skills.map((skill) => (
+                <h1 
+                    key={skill} 
+                    className={`skill-item ${selectedSkill.toString() === skill ? 'active' : ''}`}
+                    onClick={() => onSkillClick(skill)}
+                >
+                    {skill}
+                </h1>
+            ))}
+        </div>
     );
-  };
-  
-  export default FloatingLogos;
+};
+
+export default FloatingLogos;

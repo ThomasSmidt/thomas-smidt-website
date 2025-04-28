@@ -1,0 +1,41 @@
+#skill-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    margin: 0 auto;
+
+    .skill-item {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2rem;
+        margin: 1.5rem;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            transition: transform 0.2s ease-in-out; /* Smooth transition for both hover and click */
+        }
+
+        /* On hover, show the line */
+        &:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* On click (active state), keep the line visible */
+        &.active::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+    }
+    .active {
+        background-color: blue($color: #f81414);
+    }
+}

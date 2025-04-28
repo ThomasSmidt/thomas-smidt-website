@@ -1,33 +1,37 @@
-import React from 'react';
-import './Skills.css';
+import React, { useState } from 'react';
 import FloatingLogos from './FloatingLogos';
+import './Skills.scss';
+
+const skillDescriptions = {
+    '.NET': 'Experience building backend services using .NET technologies.',
+    'Angular': 'Built SPAs with Angular, RxJS, and TypeScript.',
+    'React': 'Created modern UIs with React, Redux, and hooks.',
+    'ASP.NET': 'Developed dynamic web applications using ASP.NET Core MVC.',
+    'SQL': 'Designed and optimized relational databases with SQL Server.',
+    'xUnit': 'Wrote unit tests for .NET applications with xUnit framework.',
+    'Moq': 'Used Moq for creating mock objects during unit testing.'
+};
 
 const Skills = () => {
-    return(
+    const [selectedSkill, setSelectedSkill] = useState('.NET');
+
+    const handleSkillClick = (skill) => {
+        setSelectedSkill(skill);
+    };
+
+    return (
         <section id="skills-section">
             <h1>My skills</h1>
-            <FloatingLogos />
+            <FloatingLogos 
+            onSkillClick={handleSkillClick} 
+            selectedSkill={selectedSkill}
+            />
+
             <section id="skills-container">
                 <div className="skills-box">
-                    <h1>.NET</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, 
-                        nostrum cum! Ab eveniet nam quas accusamus unde asperiores laboriosam. 
-                        Laborum.</p>
-                </div>
-                <div className="skills-box">
-                    <h1>React</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, 
-                        nostrum cum! Ab eveniet nam quas accusamus unde asperiores laboriosam. 
-                        Laborum.</p>
-                </div>
-                <div className="skills-box">
-                    <h1>SQL</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, 
-                        nostrum cum! Ab eveniet nam quas accusamus unde asperiores laboriosam. 
-                        Laborum.</p>
+                    <p>{skillDescriptions[selectedSkill]}</p>
                 </div>
             </section>
-            
         </section>
     );
 };

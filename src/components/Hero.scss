@@ -1,0 +1,24 @@
+#hero {
+    display: flex;
+    padding: 5% 10%;
+    align-items: center;
+    justify-content: center;
+  
+    #hero-desc-container {
+      > h1 {
+        font-size: 1.6rem;
+      }
+    }
+  
+    .hero-desc {
+      width: 700px;
+      font-size: 1.3rem;
+      margin-right: 100px;
+    }
+  
+    > img {
+      width: 400px;
+      border-radius: 100px;
+    }
+}
+  
