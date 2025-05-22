@@ -1,39 +1,31 @@
-import React, { useState } from 'react';
-import FloatingLogos from './FloatingLogos';
-import './Skills.scss';
+// Skills.jsx
+import React from 'react';
+import SelectableInfoPanel from './SelectableInfoPanel';
 
 const skillDescriptions = {
-    '.NET': 'Experience building backend services using .NET technologies.',
-    'Angular': 'Built SPAs with Angular, RxJS, and TypeScript.',
-    'React': 'Created modern UIs with React, Redux, and hooks.',
-    'ASP.NET': 'Developed dynamic web applications using ASP.NET Core MVC.',
-    'SQL': 'Designed and optimized relational databases with SQL Server.',
-    'xUnit': 'Wrote unit tests for .NET applications with xUnit framework.',
-    'Moq': 'Used Moq for creating mock objects during unit testing.'
+    '.NET': {
+        description: 'Experience building backend services using .NET technologies.'
+    },
+    'Angular': {
+        description: 'Experience building frontend UIs using Angular, combined with an ASP.NET and Entity Framework backend.'
+    },
+    'React': {
+        description: 'Experience building frontend UIs using react, including but not limited to, this website.'
+    },
+    'ASP.NET': {
+        description: 'Experience building full-stack apps with an ASP.NET and Entity framework backend and Blazor/Angular frontend.'
+    },
+    'SQL': {
+        description: 'Experience building backend services using .NET technologies.'
+    },
+    'xUnit': {
+        description: 'Experience building backend services using .NET technologies.'
+    },
+    'Moq': {
+        description: 'Experience building backend services using .NET technologies.'
+    },
 };
 
-const Skills = () => {
-    const [selectedSkill, setSelectedSkill] = useState('.NET');
-
-    const handleSkillClick = (skill) => {
-        setSelectedSkill(skill);
-    };
-
-    return (
-        <section id="skills-section">
-            <h1>My skills</h1>
-            <FloatingLogos 
-            onSkillClick={handleSkillClick} 
-            selectedSkill={selectedSkill}
-            />
-
-            <section id="skills-container">
-                <div className="skills-box">
-                    <p>{skillDescriptions[selectedSkill]}</p>
-                </div>
-            </section>
-        </section>
-    );
-};
-
-export default Skills;
+export default function Skills() {
+    return <SelectableInfoPanel title="My Skills" itemsMap={skillDescriptions} />;
+}

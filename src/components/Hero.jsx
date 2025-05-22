@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section id="hero">
       <div id="hero-desc-container">
-        <h1 id="hero-title">Hi, I'm Thomas Smidt</h1>
+        <h1 id="hero-title">Welcome!</h1>
         <p className="hero-desc">
           I'm a programming student studying to become a full-stack developer at TEC,
           and I'm currently looking for an apprenticeship where I can further develop my career and skills,
@@ -18,7 +18,6 @@ const Hero = () => {
           but I tried programming in one of the classes and instantly fell in love with the process and possibilities of programming, so I made the switch.
         </p>
       </div>
-      <img src={CVBillede} alt="CV Billede" />
     </section>
   );
 };

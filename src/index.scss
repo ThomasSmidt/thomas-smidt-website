@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Quicksand:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:calc(8px + .1vw);
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --text-color: black;
+}
+
+:root {
+  --color-default: black;
+  --color-active: white;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: linear-gradient(149deg,rgb(255, 210, 143) 0%, rgba(255, 255, 255, 1) 33%, rgb(9, 15, 34) 67%, rgba(41, 64, 150, 1) 100%);
+  background-size: 500%;
+  background-position: 0% 50%;
+  transition: background-position 1.5s ease;
+  color: var(--color-default);
+}
+
+/* When active, move background-position to 100% */
+body.bg-animate {
+  background-position: 100% 50%;
+  --color-default: white;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

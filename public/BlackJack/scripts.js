@@ -137,6 +137,7 @@ async function stay() {
     if (!hasBet) {
       return;
     }
+    toggleStay();
     canHit = false;
     console.log("dealer: " + dealerTotal + "player: " + playerTotal)
     while(dealerTotal < 17){
@@ -152,12 +153,12 @@ async function stay() {
       cardImg.src = "/BlackJack/assets/img/" + card.cardValue + "_" + card.cardSuit + ".png";
       cardImg.className='card-image';
       document.getElementById("dealer-cards").append(cardImg);
-      // Add a delay of 1 second (1000 milliseconds)
       await sleep(500);
     }
     document.getElementById("hidden-card").src = "/BlackJack/assets/img/" + hiddenCard.cardValue + "_" + hiddenCard.cardSuit + ".png";
     document.getElementById("dealer-total").innerHTML = "Dealer: " + dealerTotal;
     document.getElementById("player-total").innerHTML = "You:   " + playerTotal;
+    toggleStay();
     checkRound();
 }
 

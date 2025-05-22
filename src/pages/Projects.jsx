@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Projects from '../components/ProjectsComponent.jsx';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <a href="/blackjack" target="_blank">Play Blackjack</a>
+      <Projects />
     </div>
   );
 }
