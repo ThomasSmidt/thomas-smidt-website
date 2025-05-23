@@ -3,15 +3,21 @@
         font-size: 2rem;
         text-align: center;
     }
-    padding: 5vh 0;
+}
+
+.info-panel-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 0 0;
 }
 
 .item-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
     margin: 0 auto;
+    
 
     .item {
         font-family: 'Courier New', Courier, monospace;
@@ -29,7 +35,7 @@
           transform-origin: center;
           width: 100%;
           height: 1px;
-          background-color: black;
+          background-color: var(--color-default);
           transition: transform 0.2s ease-in-out;
         }
       
@@ -81,7 +87,6 @@
 }
 
 .info-box {
-    width: 50vw;
     padding: 1%;
     text-align: center;
     display: flex;
@@ -94,13 +99,15 @@
     }
 
     a {
-        margin-top: 50px;
-        padding: 10px 10px;
-        width: 200px;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        color: var(--color-active);
         background-color: #0099ff;
-        border-radius: 10px;
+        border-radius: 30px;
         text-decoration: none;
         font-weight: bold;
+        border: 1px solid #003558;
 
         &:hover {
             background-color: #0070bb;
@@ -120,4 +127,42 @@
 }
   
   
-  
+@media screen and (max-width: 800px) {
+  .skills {
+    h1{
+      text-align: left;
+    }
+  }
+
+  .selectable-info-panel {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2rem 2rem;
+  }
+    .item-container {
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: left;
+        flex-basis: 50%;
+        border-right: 2px solid var(--color-default);
+
+        .item {
+          display: block;
+          font-size: 1.5rem;
+          margin: 1rem 2rem 1rem 0;
+      } 
+    }
+    .info-box {
+      display: flex;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 1rem;
+      margin: 0 0 0 2rem;
+
+      a {
+        text-align: left;
+      }
+    }
+    
+}
