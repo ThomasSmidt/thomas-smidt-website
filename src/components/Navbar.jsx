@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaRegMoon, FaSun, FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useTheme } from '../context/ThemeContext';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -24,9 +25,12 @@ const Navbar = () => {
         <div className="theme-toggle" onClick={toggleTheme}>
           {darkMode ? <FaSun className="icon" /> : <FaRegMoon className="icon" />}
         </div>
-        <div id="burger" onClick={toggleMenu}>
+        <motion.div 
+          id="burger" 
+          onClick={toggleMenu}
+          initial={{ opacity: 0, y: -500}}>
           {menuOpen ? <FaTimes /> : <FaBars />}
-        </div>
+        </motion.div>
       </section>
     </section>
   );

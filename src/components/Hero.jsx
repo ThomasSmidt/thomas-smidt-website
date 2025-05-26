@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Hero.scss';
 
-const text = "Welcome!";
+const title = "Thomas\u00A0Smidt";
+const subTitle = "<\u00A0student \u00A0full-stack\u00A0developer\u00A0>";
 
 const containerVariants = {
   hidden: { opacity: 1 },
@@ -20,7 +21,7 @@ const letterVariants = {
     opacity: 1,
     y: `0em`,
     transition: {
-      duration: 0.3,
+      duration: 0.1,
       ease: [0.2, 0.65, 0.3, 0.9],
     },
   },
@@ -38,10 +39,30 @@ const Hero = () => {
           style={{ 
             display: 'flex', 
             gap: '0.05em',
-            justifyContent: 'center'
           }}
         >
-          {text.split("").map((char, index) => (
+          {title.split("").map((char, index) => (
+            <motion.span key={index} variants={letterVariants}>
+              {char}
+            </motion.span>
+          ))}
+        </motion.h1>
+
+        <motion.h1
+          id="hero-sub-title"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          style={{ 
+            borderBottom: '2px solid var(--secondary-color)',
+            borderRadius: '5px',
+            paddingBottom: '0.1em',
+            marginBottom: '0.5em',
+            display: 'flex', 
+            gap: '0.05em',
+          }}
+        >
+          {subTitle.split("").map((char, index) => (
             <motion.span key={index} variants={letterVariants}>
               {char}
             </motion.span>
