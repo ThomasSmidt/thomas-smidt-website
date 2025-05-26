@@ -11,12 +11,12 @@
 }
 
 :root {
-  --text-color: black;
+  --text-color: #000000;
+  --secondary-text-color: #948979;
   --theme-color: rgb(255, 248, 239);
   /* --background-gradient: linear-gradient(149deg, rgb(255, 248, 239), rgb(255, 244, 228)); */
   --background-color: #F2F2F2;
-  --secondary-color: #393E46;
-  --secondary-text-color: #948979;
+  --secondary-color: #d1d1d1;
   --shine-color: #686868;
 }
 
@@ -28,6 +28,7 @@ body {
 
 body.dark {
   --text-color: #DFD0B8;
+  --secondary-text-color: #948979;
   --theme-color: rgb(17, 18, 20);
   --background-color: #222831;
   --secondary-color: #393E46;

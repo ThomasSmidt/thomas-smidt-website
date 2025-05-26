@@ -4,6 +4,8 @@
     text-align: center;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--secondary-color);
     color: black;
 
     #nav-logo {
@@ -11,6 +13,11 @@
       text-decoration: none;
       font-weight: bold;
       color: var(--text-color);
+
+      &:hover {
+        color: var(--secondary-text-color);
+        text-decoration: none;
+      }
     }
     
     #burger {
@@ -70,7 +77,10 @@
           margin: 2px 0 0 0;
         }
       }
-
+      .theme-toggle {
+        margin-top: .4rem;
+        margin-right: 2rem
+      }
   
       #nav-links {
         display: none;
@@ -109,7 +119,7 @@
 }
 
 .icon {
-  color: var(--text-color);
+  color: var(--color-default);
   font-size: 1.5rem;
 }
 
@@ -131,13 +141,14 @@
 @media screen and (max-width: 1000px) {
   .nav-link-container {
     display: flex;
-    
   }
+
+
   #navbar {
     padding: 1rem 1rem;
   }
   .theme-toggle {
-    margin-top: .4rem;
+    margin-top: .1rem;
     margin-right: 2rem
   }
 }

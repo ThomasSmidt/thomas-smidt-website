@@ -1,4 +1,5 @@
 .selectable-info-panel {
+  margin: 0 20vw;
     h1 {
         font-size: 2rem;
         text-align: center;
@@ -17,10 +18,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    
-
+    color: var(--secondary-text-color);
+    border-bottom: 1px solid var(--secondary-color);
+    border-radius: 10px;
     .item {
-        font-family: 'Courier New', Courier, monospace;
         font-size: 2rem;
         margin: 1.5rem;
         cursor: pointer;
@@ -44,20 +45,9 @@
           transform: translateX(-50%) scaleX(1);
         }
       
-        // Rainbow style only on hover or active
         &.active,
         &:hover {
           color: transparent;
-          /*background: linear-gradient(314deg,
-            rgba(228, 51, 255, 1) 0%,
-            rgba(74, 71, 255, 1) 13%,
-            rgba(61, 252, 255, 1) 25%,
-            rgba(108, 255, 213, 1) 37%,
-            rgba(228, 51, 255, 1) 50%,
-            rgba(108, 255, 213, 1) 63%,
-            rgba(61, 252, 255, 1) 75%,
-            rgba(74, 71, 255, 1) 87%,
-            rgba(228, 51, 255, 1) 100%); */
           background: linear-gradient(344deg,var(--text-color) 0%, var(--text-color) 10%, var(--shine-color) 11%, var(--text-color)25%);
           background-size: 400% auto;
           background-clip: text;
@@ -86,20 +76,20 @@
 }
 
 .info-box {
-    padding: 1%;
+    padding: 1rem;
+    width: 50vw;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     p {
         font-size: 1.3rem;
     }
-
+    //button
     a {
         margin-top: 2rem;
-        padding: 1rem 2rem;
+        padding: .5rem 1.5rem;
         font-size: 1rem;
         color: var(--color-active);
         background-color: var(--secondary-color);
@@ -136,26 +126,28 @@
     justify-content: center;
     flex-direction: row;
     padding: 2rem 2rem;
+    margin: 0 5vw;
   }
     .item-container {
         flex-direction: column;
         align-items: flex-end;
-        text-align: left;
-        flex-basis: 50%;
-        border-right: 2px solid var(--text-color);
-
+        margin: 0;
+        flex-basis: 20%;
+        border-right: 2px solid var(--secondary-color);
+        border-bottom: none;
         .item {
           display: block;
           font-size: 1.5rem;
           margin: 1rem 2rem 1rem 0;
+          text-align: right;
       } 
     }
     .info-box {
       display: flex;
       justify-content: flex-start;
-      text-align: center;
+      text-align: left;
+      flex-basis: 80%;
       padding: 1rem;
-      margin: 0 0 0 2rem;
 
       a {
         text-align: left;
