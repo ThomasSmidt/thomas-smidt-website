@@ -10,26 +10,28 @@
     font-weight: bold;
 }
 
-/* Base light mode (default) */
 :root {
-  --color-default: black;
+  --text-color: black;
   --theme-color: rgb(255, 248, 239);
-  --background-gradient: linear-gradient(149deg, rgb(255, 248, 239), rgb(255, 244, 228));
+  /* --background-gradient: linear-gradient(149deg, rgb(255, 248, 239), rgb(255, 244, 228)); */
+  --background-color: #F2F2F2;
+  --secondary-color: #393E46;
+  --secondary-text-color: #948979;
+  --shine-color: #686868;
 }
 
 body {
   min-height: 100vh;
-  color: var(--color-default);
-  background: var(--background-gradient);
-  transition: background 1.5s ease;
+  color: var(--text-color);
+  background: var(--background-color);
 }
 
-
-/* Dark mode */
 body.dark {
-  --color-default: white;
+  --text-color: #DFD0B8;
   --theme-color: rgb(17, 18, 20);
-  --background-gradient: linear-gradient(149deg, rgb(53, 53, 65), rgb(17, 18, 20));
+  --background-color: #222831;
+  --secondary-color: #393E46;
+  --shine-color: #fff;
 }
 
 

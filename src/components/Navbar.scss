@@ -10,13 +10,13 @@
       font-size: 2rem;
       text-decoration: none;
       font-weight: bold;
-      color: var(--color-default);
+      color: var(--text-color);
     }
     
     #burger {
       display: none;
       font-size: 1.5rem;
-      color: var(--color-default);
+      color: var(--text-color);
       cursor: pointer;
       z-index: 10;
     }
@@ -34,7 +34,7 @@
       }
 
       a {
-      color: var(--color-default);
+      color: var(--text-color);
       font-size: 1rem;
       font-weight: bold;
       position: relative;
@@ -51,7 +51,7 @@
         transform-origin: center;
         width: 100%;
         height: 1px;
-        background-color: var(--color-default);
+        background-color: var(--text-color);
         transition: transform 0.1s ease-in-out;
       }
 
@@ -97,7 +97,7 @@
 .theme-toggle {
   cursor: pointer;
   margin-left: 2rem;
-  color: var(--color-default);
+  color: var(--text-color);
   
   .icon {
     font-size: 1.5rem;
@@ -109,7 +109,7 @@
 }
 
 .icon {
-  color: var(--color-default);
+  color: var(--text-color);
   font-size: 1.5rem;
 }
 
