@@ -1,5 +1,5 @@
 #navbar {
-    padding: 1rem 5rem;
+    padding: 1rem 20vw;
     display: flex;
     text-align: center;
     align-items: center;
@@ -97,13 +97,14 @@
 .theme-toggle {
   cursor: pointer;
   margin-left: 2rem;
+  color: var(--color-default);
+  
   .icon {
     font-size: 1.5rem;
-
-  }
-  color: var(--color-default);
-  &:hover {
-    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -112,7 +113,22 @@
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 800px) {
+@keyframes increase-size-hover {
+  0% {
+      transform: scale(1)
+  }
+  100% {
+      transform: scale(1.2)
+  }
+  }
+
+@media screen and (max-width: 1400px) {
+  #navbar {
+    padding: 1rem 5vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   .nav-link-container {
     display: flex;
     

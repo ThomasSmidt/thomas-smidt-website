@@ -65,12 +65,12 @@
         }
       
         &:hover {
-          animation: rainbow-loop 5s linear infinite;
+          animation: rainbow-loop 10s linear infinite;
           animation-play-state: running;
         }
       
         &.active {
-          animation: rainbow-loop 5s linear infinite;
+          animation: rainbow-loop 10s linear infinite;
           animation-play-state: paused;
         }
     }
@@ -117,12 +117,10 @@
 
 @keyframes rainbow-loop {
 0% {
-    transform: scale(1);
     background-position: 0% 0%;
 }
 100% {
     background-position: 1400% 0%;
-    transform: scale(1.2);
 }
 }
   

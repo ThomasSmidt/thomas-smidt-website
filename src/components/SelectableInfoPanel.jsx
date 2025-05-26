@@ -10,7 +10,7 @@ const SelectableInfoPanel = ({ title, itemsMap }) => {
 
     return (
         <section className="selectable-info-panel-container">
-            <h1 class="info-panel-title">{title}</h1>
+            <h1 className="info-panel-title">{title}</h1>
             <div className="selectable-info-panel">
                 <div className="item-container">
                     {keys.map((item) => (
