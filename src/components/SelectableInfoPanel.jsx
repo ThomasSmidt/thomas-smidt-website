@@ -30,9 +30,9 @@ const SelectableInfoPanel = ({ title, itemsMap }) => {
                         <motion.div
                             key={selected} // This triggers re-animation on key change
                             className="info-box"
-                            initial={hasInteracted ? { opacity: 0, x: 20 }: false}
+                            initial={hasInteracted ? { opacity: 0, x: 30 }: false}
                             animate={hasInteracted ? { opacity: 1, x: 0 }: false}
-                            exit={{ opacity: 0, x: -20 }}
+                            exit={{ opacity: 0, x: -30 }}
                             transition={{ duration: 0.1 }}
                         >
                             <p>{itemsMap[selected].description}</p>

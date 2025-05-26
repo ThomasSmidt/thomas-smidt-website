@@ -9,7 +9,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.05, // delay between letters
+      staggerChildren: 0.05,
     },
   },
 };
@@ -21,7 +21,7 @@ const letterVariants = {
     y: `0em`,
     transition: {
       duration: 0.3,
-      ease: [0.2, 0.65, 0.3, 0.9], // nice spring-like curve
+      ease: [0.2, 0.65, 0.3, 0.9],
     },
   },
 };
@@ -36,8 +36,10 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           style={{ 
-            display: 'flex', gap: 
-            '0.05em'}} // helps spacing between letters
+            display: 'flex', 
+            gap: '0.05em',
+            justifyContent: 'center'
+          }}
         >
           {text.split("").map((char, index) => (
             <motion.span key={index} variants={letterVariants}>
@@ -48,9 +50,9 @@ const Hero = () => {
 
         <motion.p
           className="hero-desc"
-          initial={{ opacity: 0, filter: 'blur(3px)' }}
-          animate={{ opacity: 1,  filter: 'blur(0px)' }}
-          transition={{ duration: 1.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: .1, duration: 1.5 }}
         >
           I'm a programming student studying to become a full-stack developer at TEC,
           and I'm currently looking for an apprenticeship where I can further develop my career and skills,
@@ -59,9 +61,9 @@ const Hero = () => {
 
         <motion.p
           className="hero-desc"
-          initial={{ opacity: 0, filter: 'blur(3px)' }}
-          animate={{ opacity: 1,  filter: 'blur(0px)' }}
-          transition={{ duration: 1.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: .3,duration: 1.5 }}
         >
           I have been programming since I enrolled at TEC in 2022. I chose to study here because I originally wanted to be an IT Supporter,
           but I tried programming in one of the classes and instantly fell in love with the process and possibilities of programming, so I made the switch.

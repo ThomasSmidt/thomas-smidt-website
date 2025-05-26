@@ -6,8 +6,7 @@
     margin: 0 auto;
   
     #hero-desc-container {
-
-      > h1 > *{
+      h1 > *{
         font-size: 1.6rem;
       }
     }
