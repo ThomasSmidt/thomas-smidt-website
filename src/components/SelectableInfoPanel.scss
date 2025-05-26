@@ -49,18 +49,18 @@
         &:hover {
           color: transparent;
           background: linear-gradient(344deg,var(--text-color) 0%, var(--text-color) 10%, var(--shine-color) 11%, var(--text-color)25%);
-          background-size: 400% auto;
+          background-size: 400% 600%;
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
       
         &:hover {
-          animation: rainbow-loop 10s linear infinite;
+          animation: rainbow-loop 20s linear infinite;
         }
       
         &.active {
-          animation: rainbow-loop 10s linear infinite;
+          animation: rainbow-loop 20s linear infinite;
         }
     }
 }
@@ -96,20 +96,21 @@
         border-radius: 10px;
         text-decoration: none;
         font-weight: bold;
-        border: 2px solid var(--text-color);
+        border: 3px solid var(--text-color);
 
         &:hover {
-            background-color: var(--background-color);
+            background-color: var(--secondary-hover-color);
+            text-decoration: underline;
         }
     }
 }
 
 @keyframes rainbow-loop {
 0% {
-    background-position: 1080% 0%;
+    background-position: 1080% 100%;
 }
 100% {
-    background-position: 0% 0%;
+    background-position: 0% 100%;
 }
 }
   

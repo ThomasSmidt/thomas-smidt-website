@@ -7,7 +7,7 @@
   
     #hero-desc-container {
 
-      > h1 {
+      > h1 > *{
         font-size: 1.6rem;
       }
     }
@@ -15,6 +15,7 @@
     .hero-desc {
       width: 50rem;
       font-size: 1.3rem;
+      margin-bottom: .5rem
     }
   
     > img {
