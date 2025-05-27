@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+      <head>
+        <script>
+      // Prevent white flash by setting body class early
+      const theme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = theme === 'dark' || (!theme && prefersDark);
+
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+      }
+    </script>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

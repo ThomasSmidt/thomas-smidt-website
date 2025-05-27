@@ -22,10 +22,10 @@ const skillDescriptions = {
         description: 'Proficient in JavaScript for both frontend and tooling development.'
     },
     'SQL': {
-        description: 'Experience writing complex queries, designing schemas, and working with relational databases using SQL and Entity Framework.'
+        description: 'Experience writing queries, designing schemas, and working with relational databases using SQL and Entity Framework.'
     },
     'Git': {
-        description: 'Proficient in version control with Git, including branching strategies, code reviews, and collaborative workflows via GitHub and GitLab.'
+        description: 'Proficient in version control with Git, including branching strategies, code reviews, and collaborative workflows via GitHub and Jira.'
     },
     'xUnit': {
         description: 'Experienced in writing unit and integration tests using xUnit for .NET applications to ensure code reliability and maintainability.'

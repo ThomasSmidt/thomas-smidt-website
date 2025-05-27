@@ -1,9 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Hero.scss';
+import { FaLocationDot } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 const title = "Thomas\u00A0Smidt";
 const subTitle = "<\u00A0student \u00A0full-stack\u00A0developer\u00A0>";
+
 
 const containerVariants = {
   hidden: { opacity: 1 },
@@ -68,7 +72,24 @@ const Hero = () => {
             </motion.span>
           ))}
         </motion.h1>
-
+        <motion.div
+          className="location"
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <FaLocationDot className='location-icon'/>
+          <p>Rødovre, Denmark</p>
+        </motion.div>
+        <motion.div
+          className="mail"
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
+          <MdEmail className='mail-icon' />
+          <p>smidt592@gmail.com</p>
+        </motion.div>
         <motion.p
           className="hero-desc"
           initial={{ opacity: 0 }}
@@ -86,8 +107,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: .3,duration: 1.5 }}
         >
-          I have been programming since I enrolled at TEC in 2022. I chose to study here because I originally wanted to be an IT Supporter,
-          but I tried programming in one of the classes and instantly fell in love with the process and possibilities of programming, so I made the switch.
+          I'm a cheerful and quick-learning employee with skills in both backend and frontend development.
         </motion.p>
 
       </div>
