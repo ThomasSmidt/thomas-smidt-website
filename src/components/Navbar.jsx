@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaRegMoon, FaSun, FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaRegMoon, FaSun, FaBars, FaTimes, FaLinkedin, FaGithub, FaFileDownload } from "react-icons/fa";
+import { HiDownload } from "react-icons/hi";
 import { useTheme } from '../context/ThemeContext';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -57,7 +58,9 @@ const Navbar = () => {
                   <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
                 </motion.div>
                 <motion.div variants={navVariants}>
-                  <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact me</Link>
+                  <a href="/Thomas Smidt - CV.pdf" download>
+                    Download CV
+                  </a>
                 </motion.div>
                 <motion.div variants={navVariants}>
                   <a href="https://github.com/ThomasSmidt"><FaGithub className="icon" /></a>
@@ -71,7 +74,11 @@ const Navbar = () => {
         ) : (
           <div id="nav-links">
             <Link to="/projects">Projects</Link>
-            <Link to="/contact">Contact me</Link>
+            <div className="download-container">
+              <a href="/Thomas Smidt - CV.pdf" download>Download CV</a>
+              <FaFileDownload className="icon download-icon" />
+            </div>
+            <p>|</p>
             <a href="https://github.com/ThomasSmidt"><FaGithub className="icon" /></a>
             <a href="https://www.linkedin.com/in/thomas-smidt-95a768249/"><FaLinkedin className="icon" /></a>
           </div>

@@ -7,7 +7,7 @@ const skillDescriptions = {
         description: 'Proficient in building scalable backend services and APIs using .NET and C#, including integration with Entity Framework.'
     },
     'Angular': {
-        description: 'Skilled in developing dynamic single-page applications with Angular, often used in combination with ASP.NET backends.'
+        description: 'Skilled in developing dynamic single-page applications with Angular, leveraging RESTful APIs typically powered by ASP.NET backends.'
     },
     'React': {
         description: 'Experienced in building modern and responsive UIs using React, including this website and other component-driven frontends.'
