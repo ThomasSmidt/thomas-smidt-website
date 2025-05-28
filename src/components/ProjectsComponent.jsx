@@ -7,7 +7,7 @@ const skillDescriptions = {
         date: '2022',
         technologies: ['HTML', 'CSS', 'JavaScript'],
         description: 'A simple blackjack game I made, when I was first learning web development.',
-        link: `${process.env.PUBLIC_URL}/blackjack/`,
+        link: 'https://thomassmidt.github.io/BlackJack/',
         linkText: 'Try it!'
     },
     'Fast Food Ordering UI': {
