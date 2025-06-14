@@ -7,7 +7,7 @@ const skillDescriptions = {
     date: "2025",
     technologies: ["React", "JavaScript", "HTML", "CSS"],
     description:
-      "A visualizer for the A* pathfinding algorithm, complete with: Drawing/Erasing for walls, setting start and end location, changing grid size and more!",
+      "A visualizer for the A* pathfinding algorithm, complete with: Drawing/Erasing walls, setting start and end location, changing grid size and more!",
     link: "https://thomassmidt.github.io/a-star/",
     linkText: "Try it!",
   },
