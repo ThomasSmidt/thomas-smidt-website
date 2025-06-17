@@ -27,7 +27,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "add-domain": "echo \"thomassmidt.com\" > build/CNAME"
+    "add-domain": "echo \"thomassmidt.com\" > build/CNAME",
+    "bd": "npm run build && npm run add-domain && npm run deploy"
   },
   "eslintConfig": {
     "extends": [
